@@ -13,12 +13,12 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping("/uri-params")
-public class UriParamController implements Function<Model, String> {
+public class UriParamController implements Function<RequestModel, String> {
 
     @Override
     @GetMapping
-    public String apply(@Valid @ModelAttribute Model model) {
-        return "Hello " + model.firstName() + " " + model.lastName();
+    public String apply(@Valid @ModelAttribute RequestModel requestModel) {
+        return "Hello " + requestModel.firstName() + " " + requestModel.lastName();
     }
 
 }

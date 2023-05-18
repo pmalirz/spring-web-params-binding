@@ -13,12 +13,12 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping("/form-params")
-public class FormParamController implements Function<Model, String> {
+public class FormParamController implements Function<RequestModel, String> {
 
     @Override
     @PostMapping(consumes = "application/x-www-form-urlencoded")
-    public String apply(@Valid @ModelAttribute Model model) {
-        return "Hello " + model.firstName() + " " + model.lastName();
+    public String apply(@Valid @ModelAttribute RequestModel requestModel) {
+        return "Hello " + requestModel.firstName() + " " + requestModel.lastName();
     }
 
 }
