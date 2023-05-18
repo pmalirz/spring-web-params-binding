@@ -1,7 +1,7 @@
 # Binding HTTP parameters directly to a model
 
-This is to showcase how to bind HTTP parameters to the model object (context).
-Although a trivial task it is often forgotten by developers.
+This is to showcase how to bind HTTP parameters to the model object (context), although it is a trivial task that is 
+often forgotten by developers.
 
 ## 🚫 Don't bind parameters via method arguments 
 
@@ -24,9 +24,9 @@ public String apply(@PathVariable String firstName, @PathVariable String lastNam
 
 ## ✅ Do bind parameters using a context object (model object)
 
-It eliminates number of separated method parameters
-using the context model - [context design pattern](https://www.baeldung.com/cs/context-design-pattern).
-An additional benefit is that one get the Spring Framework's validation mechanizm (using ```@Valid```).
+It eliminates the number of separated method parameters using the context model
+- [context design pattern](https://www.baeldung.com/cs/context-design-pattern).
+An additional benefit is that one gets the Spring Framework's validation mechanism (using `@Valid`).
 
 ### Path variable binding 
 ```java
@@ -68,4 +68,5 @@ public String apply(@Valid @ModelAttribute RequestModel requestModel) {
 ```java
 record RequestModel(@NotBlank String firstName, @NotBlank String lastName) {}
 ```
-See how all the above methods use the same model (same parameter). All can use the same interface. 
+All the above methods utilize the same model (with the same parameters). 
+They can all utilize the same interface.
