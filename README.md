@@ -3,7 +3,7 @@
 This is to showcase how to bind HTTP parameters to the model object (context), although it is a trivial task that is 
 often forgotten by developers.
 
-## 🚫 Don't bind parameters via method arguments 
+## 🚫 Don't bind parameters using raw method arguments 
 
 ```java
 @Override
