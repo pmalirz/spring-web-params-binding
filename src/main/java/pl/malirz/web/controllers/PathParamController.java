@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * Binding path parameters to model.
+ * Binding path parameters to the request model.
  */
 @RestController
 @RequestMapping("/path-params")

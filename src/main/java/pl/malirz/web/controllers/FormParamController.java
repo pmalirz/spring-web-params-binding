@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * Binding regular form to model.
+ * Binding regular form to the request model.
  */
 @RestController
 @RequestMapping("/form-params")

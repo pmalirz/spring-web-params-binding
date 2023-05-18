@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * Binding URI parameters to model.
+ * Binding URI parameters to the request model.
  */
 @RestController
 @RequestMapping("/uri-params")
